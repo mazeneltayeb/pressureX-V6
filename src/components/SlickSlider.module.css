@@ -1,0 +1,190 @@
+/* src/components/SlickSlider.module.css */
+
+.sliderContainer {
+  direction: rtl;
+  padding: 2rem 1rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+.sliderTitle {
+  text-align: center;
+  color: #333;
+  margin-bottom: 0.5rem;
+  font-size: 2.2rem;
+}
+
+.sliderDescription {
+  text-align: center;
+  color: #666;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+s
+
+.sliderWrapper {
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.slideItem {
+  padding: 10px;
+  outline: none;
+}
+
+.slideContent {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  height: 250px;
+
+}
+
+.slideContent:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.slideImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.slideContent:hover .slideImage {
+  transform: scale(1.05);
+}
+
+.slideOverlay {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+  color: white;
+  padding: 20px 15px 15px;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+
+.slideContent:hover .slideOverlay {
+  transform: translateY(0);
+}
+
+.slideTitle {
+  margin: 0 0 5px 0;
+  font-size: 1.2rem;
+}
+
+.slideDesc {
+  margin: 0;
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.sliderControls {
+  margin-top: 2rem;
+  padding: 1rem;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.controlsInfo {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.controlBadge {
+  display: inline-flex;
+  align-items: center;
+  background-color: #fff;
+  padding: 8px 15px;
+  border-radius: 50px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.controlIcon {
+  margin-left: 8px;
+  font-size: 1.1rem;
+}
+
+/* تصميم متجاوب إضافي */
+@media (max-width: 1200px) {
+  .sliderTitle {
+    font-size: 2rem;
+  }
+  
+  .slideContent {
+    height: 220px;
+  }
+}
+
+@media (max-width: 992px) {
+  .sliderTitle {
+    font-size: 1.8rem;
+  }
+  
+  .slideContent {
+    height: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sliderContainer {
+    padding: 1.5rem 0.5rem;
+  }
+  
+  .sliderTitle {
+    font-size: 1.6rem;
+  }
+  
+  .sliderDescription {
+    font-size: 1rem;
+  }
+  
+  .slideContent {
+    height: 180px;
+  }
+  
+  .controlsInfo {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .controlBadge {
+    width: 100%;
+    max-width: 300px;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .sliderTitle {
+    font-size: 1.4rem;
+  }
+  
+  .slideContent {
+    height: 160px;
+  }
+}
+
+
+
+/*  */
+
